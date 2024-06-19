@@ -34,9 +34,9 @@ const Navbar = () => {
         { link: "Blog", path: "/blog" },
     ]
     return (
-        <header>
-            <nav>
-                <div>
+        <header className='w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300'>
+            <nav className={`py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0 left-0 right-0 bg-red-400" : ""}`}>
+                <div className='flex justify-between items-center text-base gap-8'>
                     {/* {logo} */}
                     <Link to="/" className='text-3xl font-bold text-red-600 flex items-center gap-2'> <PiBooksBold className='inline-block' />Books</Link>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 {/* navItem for sm devices */}
-                <div className={`space-y-4 px-4 mt-16 py-7 bg-red-700`}>
+                <div className={`space-y-4 px-4 mt-16 py-7 bg-red-700 ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
                     {
                         navItems.map(({ link, path }) => <Link key={path} to={path} className='block text-base text-white uppercase cursor-pointer'> {link} </Link>)
                     }

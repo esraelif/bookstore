@@ -6,7 +6,7 @@ const FavoriteBooks = () => {
     useEffect(() => {
         fetch("http://localhost:5173/all-books")
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setBooks(data))
     }, [])
     return (
         <div>

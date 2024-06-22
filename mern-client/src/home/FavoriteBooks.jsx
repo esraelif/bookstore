@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BookCard from '../components/BookCard';
 
 const FavoriteBooks = () => {
     const [books, setBooks] = useState([])
@@ -9,7 +10,7 @@ const FavoriteBooks = () => {
     }, [])
     return (
         <div>
-            favoritebooks
+            <BookCard books={books} headline="Best Seller Books" />
         </div>
     );
 }

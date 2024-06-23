@@ -68,7 +68,9 @@ async function run() {
                     "bookPDFURL": "https://www.goodreads.com/book/show/176444025-everest-inc"
                 },
                 {
-                    "_id": "666c5ba10999b74f4e84361f",
+                    "_id": {
+                        "$oid": "666c5ba10999b74f4e84361f"
+                    },
                     "bookTitle": "House of Sky",
                     "authorName": "Sarah J. Maas",
                     "imageURL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633097753i/40132775.jpg",

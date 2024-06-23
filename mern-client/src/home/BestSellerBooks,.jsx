@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import BookCard from '../components/BookCard';
 
-const FavoriteBooks = () => {
+const BestSellerBooks = () => {
     const [books, setBooks] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5173/all-books")
+        fetch("http://localhost:3000/all-books")
             .then(res => res.json())
-            .then(data => setBooks(data))
+            .then(data => setBooks(data.slice(0, 8)))
     }, [])
     return (
         <div>
@@ -15,4 +15,4 @@ const FavoriteBooks = () => {
     );
 }
 
-export default FavoriteBooks;
+export default BestSellerBooks;

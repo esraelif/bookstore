@@ -1,9 +1,10 @@
 import React from 'react';
 import FavBookImg from "../assets/favoritebook.jpg"
+import { Link } from 'react-router-dom';
 
 const FavBook = () => {
     return (
-        <div className='px-4 lg:px-24 my-20'>
+        <div className='px-4 lg:px-24 my-20 flex flex-col md:flex-row justify-between items-center gap-10'>
             <div className='md:w-1/2'>
                 <img src={FavBookImg} alt="" className='rounded md:w-10/12' />
             </div>
@@ -24,6 +25,8 @@ const FavBook = () => {
                         <p className='text-base'>PDF Downloads</p>
                     </div>
                 </div>
+
+                <Link className='mt-12 block' to="/shop"><button className='bg-red-700 text-white font-semibold px-5 py-2 rounded hover:bg-black transition-all duration-300'>Explore More</button></Link>
             </div>
 
         </div>

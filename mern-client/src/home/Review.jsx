@@ -6,6 +6,8 @@ import { Avatar } from "flowbite-react";
 import proPic from "../assets/profile.jpg"
 import proPic2 from "../assets/profile2.jpg"
 import proPic3 from "../assets/profile3.jpg"
+import proPic4 from "../assets/profile4.jpg"
+import proPic5 from "../assets/profile5.jpg"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -43,7 +45,7 @@ const Review = () => {
                 modules={[Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide>
+                <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
                     <div className='space-y-6'>
                         <div className='text-amber-500 flex gap-2'>
                             <FaStar />
@@ -61,7 +63,7 @@ const Review = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
                     <div className='space-y-6'>
                         <div className='text-amber-500 flex gap-2'>
                             <FaStar />
@@ -79,7 +81,7 @@ const Review = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
                     <div className='space-y-6'>
                         <div className='text-amber-500 flex gap-2'>
                             <FaStar />
@@ -95,6 +97,44 @@ const Review = () => {
                             <Avatar img={proPic3} alt="avatar of Jese" rounded className='w-10 mb-4' />
                             <h5 className='text-lg font-medium'>Gill Temple</h5>
                             <p className='text-base'>Student</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+                    <div className='space-y-6'>
+                        <div className='text-amber-500 flex gap-2'>
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+
+                        </div>
+                        {/* text */}
+                        <div className='mt-7'>
+                            <p className='mb-5'>W
+                                Excellent selection of books, intuitive website design, and fast shipping. A fantastic place to discover and buy your next favorite read.</p>
+                            <Avatar img={proPic4} alt="avatar of Jese" rounded className='w-10 mb-4' />
+                            <h5 className='text-lg font-medium'>Max Harry</h5>
+                            <p className='text-base'>Dentist</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+                    <div className='space-y-6'>
+                        <div className='text-amber-500 flex gap-2'>
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+
+                        </div>
+                        {/* text */}
+                        <div className='mt-7'>
+                            <p className='mb-5'>W
+                                Great variety of books, easy navigation, and prompt delivery. This site makes finding and purchasing books a breeze.</p>
+                            <Avatar img={proPic5} alt="avatar of Jese" rounded className='w-10 mb-4' />
+                            <h5 className='text-lg font-medium'>Tom Black</h5>
+                            <p className='text-base'>Engineer</p>
                         </div>
                     </div>
                 </SwiperSlide>

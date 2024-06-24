@@ -14,7 +14,7 @@ const Shop = () => {
                 {
                     books.map(book => <Card>
                         <img src={book.imageURL} alt="" className='h-96' />
-                        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h5 className="text-2xl font-bold tracking-tight text-black-900 dark:text-white">
                             {book.bookTitle}
                         </h5>
                         <p>

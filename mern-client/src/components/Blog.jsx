@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Blog = () => {
+const Blog = ({ children }) => {
     return (
-        <div>
-            Blog
+        <div className='mt-80 px-6'>
+            This is a Blog page
         </div>
     );
 }

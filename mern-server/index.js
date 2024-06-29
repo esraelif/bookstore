@@ -9,14 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB configuration
-const uri = "mongodb+srv://elifesratunca:1985.Esra2008.Kaan@esraelif.eea5atc.mongodb.net/?retryWrites=true&w=majority&appName=EsraElif";
-const client = new MongoClient(uri, {
+const url = "mongodb+srv://elifesratunca:1985.Esra2008.Kaan@esraelif.eea5atc.mongodb.net/?retryWrites=true&w=majority&appName=EsraElif";
+const client = new MongoClient(url, {
 
-    // serverApi: {
-    //     version: ServerApiVersion.v1,
-    //     strict: true,
-    //     deprecationErrors: true,
-    // }
     useNewUrlParser: true
 });
 

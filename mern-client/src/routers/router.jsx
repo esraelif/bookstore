@@ -14,6 +14,9 @@ import UploadBook from "../dashboard/UploadBook";
 import ManageBooks from "../dashboard/ManageBooks";
 import EditBooks from "../dashboard/EditBooks";
 import Signup from "../components/Signup";
+import Login from "../components/Login";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Logout from "../components/Logout";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -48,7 +51,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/admin/dashboard',
-                element: <Dashboard />
+                element: <PrivateRoute> <Dashboard /></PrivateRoute>
             },
 
             {
@@ -69,8 +72,14 @@ const router = createBrowserRouter([
     {
         path: "sign-up",
         element: <Signup />
+    },
+    {
+        path: "login",
+        element: <Login />
+    }, {
+        path: "logout",
+        element: <Logout />
+    },
 
-
-    }
 ]);
 export default router;

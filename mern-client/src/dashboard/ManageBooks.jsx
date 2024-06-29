@@ -20,7 +20,7 @@ const ManageBooks = () => {
         <div className='px-4 my-12'>
             <h2 className='mb-8 text-3xl font-bold'>Manage Your Books</h2>
             {/* table for book data */}
-            <Table className='lg:w-[1180px]'>
+            <Table className='lg:w-[10px]'>
                 <Table.Head>
                     <Table.HeadCell>No.</Table.HeadCell>
                     <Table.HeadCell>Book Name</Table.HeadCell>
@@ -53,37 +53,10 @@ const ManageBooks = () => {
 
                     </Table.Body>)
                 }
-                <Table.Body className="divide-y">
 
-
-                    <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                            Microsoft Surface Pro
-                        </Table.Cell>
-                        <Table.Cell>White</Table.Cell>
-                        <Table.Cell>Laptop PC</Table.Cell>
-                        <Table.Cell>$1999</Table.Cell>
-                        <Table.Cell>
-                            <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                                Edit
-                            </a>
-                        </Table.Cell>
-                    </Table.Row>
-                    <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Magic Mouse 2</Table.Cell>
-                        <Table.Cell>Black</Table.Cell>
-                        <Table.Cell>Accessories</Table.Cell>
-                        <Table.Cell>$99</Table.Cell>
-                        <Table.Cell>
-                            <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                                Edit
-                            </a>
-                        </Table.Cell>
-                    </Table.Row>
-                </Table.Body>
             </Table>
 
-        </div >
+        </div>
     );
 }
 

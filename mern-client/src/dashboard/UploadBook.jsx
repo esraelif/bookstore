@@ -47,30 +47,30 @@ const UploadBook = () => {
                 <div className='flex gap-8'>
                     <div className='lg:w-1/2'>
                         <div className="mb-2 block">
-                            <Label htmlFor="bookTitle" value="Book Title" />
+                            <Label htmlFor="bookTitle" value="Book Title" className='text-black' />
                         </div>
-                        <TextInput id="bookTitle" name='bookTitle' type="text" placeholder="Book Name" required />
+                        <TextInput id="bookTitle" name='bookTitle' type="text" placeholder="Book Name" required className='text-black' />
                     </div>
                     {/* author name */}
                     <div className='lg:w-1/2'>
                         <div className="mb-2 block">
-                            <Label htmlFor="authorName" value="Author Name" />
+                            <Label htmlFor="authorName" value="Author Name" className='text-black' />
                         </div>
-                        <TextInput id="bauthorName" name='authorName' type="text" placeholder="Author Name" required />
+                        <TextInput id="authorName" name='authorName' type="text" placeholder="Author Name" required />
                     </div>
                 </div>
                 {/* second row */}
                 <div className='flex gap-8'>
                     <div className='lg:w-1/2'>
                         <div className="mb-2 block">
-                            <Label htmlFor="imageURL" value="Book Image URL" />
+                            <Label htmlFor="imageURL" value="Book Image URL" className='text-black' />
                         </div>
                         <TextInput id="imageURL" name='imageURL' type="text" placeholder="Book Image URL" required />
                     </div>
                     {/* category name */}
                     <div className='lg:w-1/2'>
                         <div className="mb-2 block">
-                            <Label htmlFor="inputState" value="Book Category" />
+                            <Label htmlFor="inputState" value="Book Category" className='text-black' />
                         </div>
                         <Select id='inputState' name='categoryName' className='w-full rounded' value={selectedBookCategory} onChange={handleChangeSelectedValue}>
                             {
@@ -84,7 +84,7 @@ const UploadBook = () => {
                 {/* bookDescription */}
                 <div>
                     <div className="mb-2 block">
-                        <Label htmlFor="bookDescription" value="Book Description" />
+                        <label htmlFor="bookDescription" value="Book Description" className='text-black' />
                     </div>
                     <Textarea id="bookDescription" name='BookDescription' placeholder="Write your book description..." required rows={5} className='w-full' />
 
@@ -96,7 +96,7 @@ const UploadBook = () => {
                     </div>
                     <TextInput id="bookPDFURL" name='bookPDFURL' type="text" placeholder="book pdf url" required shadow />
                 </div>
-                <Button type="submit" className='mt-5'>Upload Book</Button>
+                <Button type="submit" className='mt-5 text-black bg-red-600'>Upload Book</Button>
 
 
             </form >

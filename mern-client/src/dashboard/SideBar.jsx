@@ -1,19 +1,25 @@
 import { Sidebar } from "flowbite-react";
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
 import { BiBuoy } from "react-icons/bi";
-import userImg from "../assets/profile.jpg"
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
+import { useNavigate } from 'react-router-dom';
 
 const SideBar = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        logout().then(() => {
+            alert("Sign-out successfully!");
+            navigate('/login');
+        }).catch((error) => {
+            console.error("Logout failed", error);
+        });
+    };
     return (
         <Sidebar aria-label="Sidebar with content separator example" className="w-80">
-            <Sidebar.Logo href="/" img={user?.photoURL} imgAlt="logo" className="w-16 h-16 rounded" >
+            <Sidebar.Logo href="/" img={user?.photoURL} imgAlt="logo" className="w-16 h-16 rounded">
                 <p className="m-5">{user?.displayName || "Demo"}</p>
-                {/* <img src= alt="" className="h-13 w-13" /> */}
-
-
             </Sidebar.Logo>
             <Sidebar.Items>
                 <Sidebar.ItemGroup>
@@ -32,10 +38,13 @@ const SideBar = () => {
                     <Sidebar.Item href="#" icon={HiShoppingBag}>
                         Products
                     </Sidebar.Item>
+                    <Sidebar.Item href="/sell-your-book" icon={HiViewBoards}>
+                        Sell Your Book
+                    </Sidebar.Item>
                     <Sidebar.Item href="/login" icon={HiArrowSmRight}>
                         Sign In
                     </Sidebar.Item>
-                    <Sidebar.Item href="/logout" icon={HiTable}>
+                    <Sidebar.Item onClick={handleLogout} icon={HiTable}>
                         Log Out
                     </Sidebar.Item>
                 </Sidebar.ItemGroup>
@@ -54,5 +63,7 @@ const SideBar = () => {
         </Sidebar>
     );
 }
+
+
 
 export default SideBar;

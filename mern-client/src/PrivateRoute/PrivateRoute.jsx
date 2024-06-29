@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthProvider';
 import { useLocation } from 'react-router-dom';
 import { Spinner } from 'flowbite-react';
+import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext)
